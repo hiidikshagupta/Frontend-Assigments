@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6</title>
+</head>
+<body>
+    <h1 id="heading">Hello, Welcome!</h1>
+    <p>This is a simple paragraph.</p>
+    <button id="button-id" 
+    type="button">Click this to enter</button>
+</body>
+<script>
+    const button = document.getElementById("button-id");
+    button.addEventListener("click", function(){  
+    button.innerText="Loading...";
+    button.style.backgroundColor="white";  
+    button.disabled=true;
+    document.body.style.backgroundColor="black";
+    document.body.style.color="white";
+    });
+</script>
+</html>
