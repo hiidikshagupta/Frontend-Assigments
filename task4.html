@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+
+<body>
+    <h2>Form Example</h2>
+
+    <form id="form">
+
+        <input type="text" id="name" placeholder="Enter name">
+
+        <input type="email" id="email" placeholder="Enter email">
+
+        <input type="password" id="password" placeholder="enter password">
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+<script>
+    const form = document.querySelector("#form")
+    const nameInput = document.querySelector("#name")
+    const emailInput = document.querySelector("#email")
+    const passwordInput = document.querySelector("#password")
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault()
+
+        const name = nameInput.value
+        const email = emailInput.value
+        const password = passwordInput.value
+
+        if(!/[A-Z]/.test(password) || (password.length<8) || (password.length>10)){
+            alert("password must be between length 8-10 and contain one capital letter")
+        }
+
+        console.log("Name:", name)
+        console.log("Email:", email)
+        console.log("Password:", password)
+
+    })
+</script>
+
+</html>
